@@ -1,4 +1,4 @@
-import pygame, sys
+import pygame, sys, random
 # sys - used to exit the program
 
 def ball_animation():
@@ -15,7 +15,7 @@ def ball_animation():
         ball_speed_y *= -1
 
     if ball.left <= 0 or ball.right >= screen_width:
-        ball_speed_x *= -1
+        ball_restart()
 
     if ball.colliderect(player) or ball.colliderect(opponent):
         #reverses the direction of the ball when it hits the player or opponent paddle
@@ -40,6 +40,12 @@ def opponent_ai():
     if opponent.bottom >= screen_height:
         opponent.bottom = screen_height
 
+def ball_restart():
+    global ball_speed_x, ball_speed_y
+    ball.center = (screen_width/2, screen_height/2)
+    ball_speed_y *= random.choice((1, -1))
+    ball_speed_x *= random.choice((1, -1))
+
 #General setup
 #required to initialize pygame
 pygame.init()
@@ -61,8 +67,8 @@ opponent = pygame.Rect(10, screen_height/2 - 70, 10, 140)
 bg_color = pygame.Color('grey12')
 light_grey = (200, 200, 200)
 
-ball_speed_x = 7
-ball_speed_y = 7
+ball_speed_x = 7 * random.choice((1, -1))
+ball_speed_y = 7 * random.choice((1, -1))
 player_speed = 0
 opponent_speed = 7
 
