@@ -1,4 +1,4 @@
-# Pong Game with Pygame
+# Pong Game using Pygame
 
 A simple recreation of the classic Pong game built with Python and Pygame.
 
