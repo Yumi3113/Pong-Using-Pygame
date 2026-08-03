@@ -11,3 +11,6 @@ Pygame is an open-source Python library designed for creating 2D games and multi
 Pygame program runs inside a game loop, which continuously processes user input, updates the game's state, and redraws everything on the screen every frame. This loop allows the game to respond to keyboard and mouse input while keeping gameplay smooth and interactive.
 
 For beginners, Pygame is a great way to learn the fundamentals of game development, including rendering graphics, working with coordinates, detecting collisions, and managing game logic using Python.
+
+## Screenshots
+<img width="1273" height="953" alt="image" src="https://github.com/user-attachments/assets/3a900768-2518-4be0-95a1-b5bf6a21e157" />
