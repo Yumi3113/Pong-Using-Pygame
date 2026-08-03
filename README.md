@@ -4,6 +4,9 @@ A simple recreation of the classic Pong game built with Python and Pygame.
 
 This project was created as a learning exercise to practise Python fundamentals, game loops, keyboard input, collision detection, scoring, and basic 2D graphics.
 
+## Screenshots
+<img width="1273" height="953" alt="image" src="https://github.com/user-attachments/assets/3a900768-2518-4be0-95a1-b5bf6a21e157" />
+
 ## About Pygame
 
 Pygame is an open-source Python library designed for creating 2D games and multimedia applications. It provides tools for handling graphics, animations, user input, sound, collision detection, and timing, making it much easier to build games without creating everything from scratch.
@@ -11,6 +14,3 @@ Pygame is an open-source Python library designed for creating 2D games and multi
 Pygame program runs inside a game loop, which continuously processes user input, updates the game's state, and redraws everything on the screen every frame. This loop allows the game to respond to keyboard and mouse input while keeping gameplay smooth and interactive.
 
 For beginners, Pygame is a great way to learn the fundamentals of game development, including rendering graphics, working with coordinates, detecting collisions, and managing game logic using Python.
-
-## Screenshots
-<img width="1273" height="953" alt="image" src="https://github.com/user-attachments/assets/3a900768-2518-4be0-95a1-b5bf6a21e157" />
