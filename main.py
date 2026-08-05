@@ -11,9 +11,13 @@ def ball_animation():
     #Dont use equals to check for collision, use less than or greater than
     #This is beacause the ball may move more than 1 pixel per frame, so it may skip over the paddle and not register a collision
     if ball.top <= 0 or ball.bottom >= screen_height:
+        pygame.mixer.Sound.play(pong_sound)
         #reverses the direction of the ball when it hits the top or bottom of the screen
         ball_speed_y *= -1
+
+    #player and opponent score
     if ball.left <= 0:
+        pygame.mixer.Sound.play(score_sound)
         player_score += 1
         ball_restart()
 
@@ -22,6 +26,7 @@ def ball_animation():
         ball_restart()
 
     if ball.colliderect(player) and ball_speed_x > 0:
+        pygame.mixer.Sound.play(pong_sound)
         if abs(ball.right - player.left) < 10:
             ball_speed_x *= -1
         elif abs(ball.bottom - player.top) < 10 and ball_speed_y > 0:
@@ -30,7 +35,8 @@ def ball_animation():
             ball_speed_y *= -1
 
     if ball.colliderect(opponent) and ball_speed_x < 0:
-        if abs(ball.right - opponent.left) < 10:
+        pygame.mixer.Sound.play(pong_sound)
+        if abs(ball.left - opponent.right) < 10:
             ball_speed_x *= -1
         elif abs(ball.bottom - opponent.top) < 10 and ball_speed_y > 0:
             ball_speed_y *= -1
@@ -94,6 +100,10 @@ opponent_speed = 7
 player_score = 0
 opponent_score = 0
 font = pygame.font.Font("freesansbold.ttf", 32)
+
+# Sound
+pong_sound = pygame.mixer.Sound("pong.ogg")
+score_sound = pygame.mixer.Sound("score.ogg")
 
 while True:
     #handling input
