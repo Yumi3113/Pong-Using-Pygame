@@ -4,8 +4,64 @@ A simple recreation of the classic Pong game built with Python and Pygame.
 
 This project was created as a learning exercise to practise Python fundamentals, game loops, keyboard input, collision detection, scoring, and basic 2D graphics.
 
-## Screenshots
-<img width="1273" height="953" alt="image" src="https://github.com/user-attachments/assets/3a900768-2518-4be0-95a1-b5bf6a21e157" />
+## Features
+
+- Classic Pong gameplay
+- Single-player mode with an AI opponent
+- Ball collision physics
+- Score tracking
+- Sound effects for collisions and scoring
+- Random ball direction after each point
+- Smooth game loop using Pygame
+- Keyboard controls
+- 60 FPS gameplay
+- On-screen start prompt
+
+## Demo
+
+<img width="1269" height="932" alt="Animation" src="https://github.com/user-attachments/assets/28d98f27-ca65-480d-af90-fb0850f1801a" />
+
+## Controls
+
+| Player | Keys |
+|---------|------|
+| Right Paddle | ↑ / ↓ |
+
+
+## Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/pong-game.git
+```
+
+2. Navigate to the project
+
+```bash
+cd pong-game
+```
+
+3. Install dependencies
+
+```bash
+pip install pygame
+```
+
+4. Run the game
+
+```bash
+python main.py
+```
+
+## How to Play
+
+- Press any key to start the game.
+- Use the **Up (↑)** and **Down (↓)** arrow keys to move your paddle.
+- Prevent the ball from passing your paddle.
+- Score a point by hitting the ball past the AI opponent.
+- The ball resets with a random direction after each point.
+- The first player to reach the winning score wins the game.
 
 ## About Pygame
 
