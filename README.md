@@ -16,10 +16,11 @@ This project was created as a learning exercise to practise Python fundamentals,
 - Keyboard controls
 - 60 FPS gameplay
 - On-screen start prompt
+- Winning score system (first to 5 points wins)
 
 ## Demo
 
-<img width="1269" height="932" alt="Animation" src="https://github.com/user-attachments/assets/28d98f27-ca65-480d-af90-fb0850f1801a" />
+<img width="1265" height="942" alt="the onwjdfankssdfasdfdfsdfs" src="https://github.com/user-attachments/assets/94800f65-2d1b-45f1-84e9-f97092140381" />
 
 ## Controls
 
