@@ -1,8 +1,11 @@
-# Pong Game with Pygame
+# Pong Game using Pygame
 
 A simple recreation of the classic Pong game built with Python and Pygame.
 
 This project was created as a learning exercise to practise Python fundamentals, game loops, keyboard input, collision detection, scoring, and basic 2D graphics.
+
+## Screenshots
+<img width="1273" height="953" alt="image" src="https://github.com/user-attachments/assets/3a900768-2518-4be0-95a1-b5bf6a21e157" />
 
 ## About Pygame
 
