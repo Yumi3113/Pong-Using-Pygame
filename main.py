@@ -112,7 +112,8 @@ while True:
                 player_speed -= 7
             if event.key == pygame.K_UP:
                 player_speed += 7
- 
+
+    ball_animation()   
     player_animation()
     opponent_ai()
 
