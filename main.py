@@ -42,8 +42,6 @@ def ball_animation():
             ball_speed_y *= -1
         elif abs(ball.top - opponent.bottom) < 10 and ball_speed_y < 0:
             ball_speed_y *= -1
-            
-
 
 def player_animation():
     #moves the player paddle up and down based on the player_speed variable
@@ -73,7 +71,6 @@ def ball_restart():
 #required to initialize pygame
 pygame.init()
 
-
 #runs at a constant speed
 clock = pygame.time.Clock()
 
@@ -102,6 +99,8 @@ opponent_speed = 7
 player_score = 0
 opponent_score = 0
 font = pygame.font.Font("freesansbold.ttf", 32)
+message_font = pygame.font.Font("freesansbold.ttf", 24)
+
 
 # Sound
 pong_sound = pygame.mixer.Sound("pong.ogg")
@@ -135,6 +134,7 @@ while True:
 
     #visuals
     screen.fill(bg_color)
+    
     pygame.draw.rect(screen, light_grey, player)
     pygame.draw.rect(screen, light_grey, opponent)
     pygame.draw.ellipse(screen, light_grey, ball)
@@ -146,6 +146,13 @@ while True:
 
     opponent_text = font.render(f"{opponent_score}", False, light_grey)
     screen.blit(opponent_text, (600, 470))
+
+    #Make the start text appear when the game is not started
+    if not game_started:
+        start_text = message_font.render("Press UP or DOWN to Start", True, light_grey)
+        start_rect = start_text.get_rect(center=(screen_width / 2, 40))
+        screen.blit(start_text, start_rect)
+
 
     #updating the window
     #drawing the background with whats in the loop
