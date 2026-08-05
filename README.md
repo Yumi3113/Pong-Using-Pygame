@@ -1,4 +1,3 @@
-<img width="1265" height="942" alt="the onwjdfankssdfasdfdfsdfs" src="https://github.com/user-attachments/assets/94800f65-2d1b-45f1-84e9-f97092140381" />
 # Pong Game using Pygame
 
 A simple recreation of the classic Pong game built with Python and Pygame.
@@ -20,7 +19,7 @@ This project was created as a learning exercise to practise Python fundamentals,
 
 ## Demo
 
-<img width="1265" height="942" alt="Demo" src="https://github.com/user-attachments/assets/6285f11d-9587-4290-a8a0-b797562fdda4" />
+<img width="1265" height="942" alt="the onwjdfankssdfasdfdfsdfs" src="https://github.com/user-attachments/assets/94800f65-2d1b-45f1-84e9-f97092140381" />
 
 ## Controls
 
