@@ -5,7 +5,10 @@ A simple recreation of the classic Pong game built with Python and Pygame.
 This project was created as a learning exercise to practise Python fundamentals, game loops, keyboard input, collision detection, scoring, and basic 2D graphics.
 
 ## Screenshots
-<img width="1273" height="953" alt="image" src="https://github.com/user-attachments/assets/3a900768-2518-4be0-95a1-b5bf6a21e157" />
+
+<img width="1270" height="953" alt="image" src="https://github.com/user-attachments/assets/ce94e70b-b76c-4361-83f2-8e279b9d1700" />
+
+<img width="1277" height="953" alt="image" src="https://github.com/user-attachments/assets/1725741c-f1dd-4d39-977c-8cb604de197f" />
 
 ## About Pygame
 
