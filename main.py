@@ -2,8 +2,7 @@ import pygame, sys, random
 # sys - used to exit the program
 
 def ball_animation():
-    global ball_speed_x, ball_speed_y, player_score, opponent_score
-
+    global ball_speed_x, ball_speed_y, player_score, opponent_score, game_over, winner
     ball.x += ball_speed_x
     ball.y += ball_speed_y
 
@@ -19,11 +18,19 @@ def ball_animation():
     if ball.left <= 0:
         pygame.mixer.Sound.play(score_sound)
         player_score += 1
-        ball_restart()
+        if player_score >= winning_score:
+            game_over = True
+            winner = "Player Wins!"
+        else:
+            ball_restart()
 
     if ball.right >= screen_width:
         opponent_score += 1
-        ball_restart()
+        if opponent_score >= winning_score:
+            game_over = True
+            winner = "Opponent Wins!"
+        else:
+            ball_restart()
 
     if ball.colliderect(player) and ball_speed_x > 0:
         pygame.mixer.Sound.play(pong_sound)
@@ -95,9 +102,14 @@ ball_speed_y = 7 * random.choice((1, -1))
 player_speed = 0
 opponent_speed = 7
 
-#text variables
+#Game variables
 player_score = 0
 opponent_score = 0
+winning_score = 5
+game_over = False
+winner = ""
+
+#Fonts
 font = pygame.font.Font("freesansbold.ttf", 32)
 message_font = pygame.font.Font("freesansbold.ttf", 24)
 
@@ -120,6 +132,16 @@ while True:
             if event.key == pygame.K_UP:
                 player_speed -= 7
                 game_started = True
+
+            if event.key == pygame.K_SPACE and game_over:
+                player_score = 0
+                opponent_score = 0
+                game_over = False
+                winner = ""
+                game_started = False
+                player_speed = 0
+                ball_restart()
+
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_DOWN:
                 player_speed -= 7
@@ -128,7 +150,7 @@ while True:
 
     player_animation()
 
-    if game_started:
+    if game_started and not game_over:
         ball_animation()
         opponent_ai()
 
@@ -153,6 +175,20 @@ while True:
         start_rect = start_text.get_rect(center=(screen_width / 2, 40))
         screen.blit(start_text, start_rect)
 
+    if game_over:
+        winner_text = message_font.render(winner, True, light_grey)
+        winner_rect = winner_text.get_rect(
+            center=(screen_width / 2, screen_height / 2 - 80)
+        )
+        screen.blit(winner_text, winner_rect)
+
+        restart_text = message_font.render(
+            "Press SPACE to Play Again", True, light_grey
+        )
+        restart_rect = restart_text.get_rect(
+            center=(screen_width / 2, screen_height / 2 - 40)
+        )
+        screen.blit(restart_text, restart_rect)
 
     #updating the window
     #drawing the background with whats in the loop
