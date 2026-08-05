@@ -16,6 +16,7 @@ This project was created as a learning exercise to practise Python fundamentals,
 - Keyboard controls
 - 60 FPS gameplay
 - On-screen start prompt
+- Winning score system (first to 5 points wins)
 
 ## Demo
 
