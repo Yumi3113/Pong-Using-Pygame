@@ -73,6 +73,7 @@ def ball_restart():
 #required to initialize pygame
 pygame.init()
 
+
 #runs at a constant speed
 clock = pygame.time.Clock()
 
@@ -81,6 +82,7 @@ screen_width = 1280
 screen_height = 960
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption('Pong')
+game_started = False
 
 #Game Rectangles
 #the perapeters center the ball in the middle of the screen and make it 30x30
@@ -115,17 +117,21 @@ while True:
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_DOWN:
                 player_speed += 7
+                game_started = True
             if event.key == pygame.K_UP:
                 player_speed -= 7
+                game_started = True
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_DOWN:
                 player_speed -= 7
             if event.key == pygame.K_UP:
                 player_speed += 7
 
-    ball_animation()   
     player_animation()
-    opponent_ai()
+
+    if game_started:
+        ball_animation()
+        opponent_ai()
 
     #visuals
     screen.fill(bg_color)
