@@ -34,7 +34,7 @@ This project was created as a learning exercise to practise Python fundamentals,
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/pong-game.git
+gh repo clone Yumi3113/Pong-Using-Pygame
 ```
 
 2. Navigate to the project
