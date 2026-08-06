@@ -31,25 +31,25 @@ This project was created as a learning exercise to practise Python fundamentals,
 
 ## Installation
 
-1. Clone the repository
+1. Clone the repository:
 
 ```bash
 gh repo clone Yumi3113/Pong-Using-Pygame
 ```
 
-2. Navigate to the project
+2. Navigate to the project directory:
 
 ```bash
-cd pong-game
+cd Pong-Using-Pygame
 ```
 
-3. Install dependencies
+3. Install the required dependency:
 
 ```bash
 pip install pygame
 ```
 
-4. Run the game
+4. Run the game:
 
 ```bash
 python main.py
